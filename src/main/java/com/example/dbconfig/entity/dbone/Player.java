@@ -1,28 +1,23 @@
 package com.example.dbconfig.entity.dbone;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@Entity
 @Getter
 @Setter
-@Entity
-@Table
+@Builder
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Player {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @ToString.Exclude
     private Long id;
 
-    private String Name;
+    private String name;
+
     private Double rating;
-
-    public Player(String name, Double rating) {
-        Name = name;
-        this.rating = rating;
-    }
-
-    public Player() {
-
-    }
 }

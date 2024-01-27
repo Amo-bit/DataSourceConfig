@@ -11,5 +11,4 @@ public class DbConfigApplication {
     public static void main(String[] args) {
         SpringApplication.run(DbConfigApplication.class, args);
     }
-
 }
